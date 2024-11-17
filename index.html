@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensaje especial</title>
+  <style>
+    body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-color: #ffc0cb; /* Fondo rosa */
+  margin-top: 10%;
+}
+
+h1 {
+  color: #ff69b4; /* Rosa fuerte */
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1px; /* Espaciado leve entre letras */
+  color: #000; /* Negro para que sea legible */
+}
+
+button {
+  background-color: #ff6f61; /* Botón rosa fuerte */
+  color: white;
+  border: 2px solid #ff9a8c; /* Bordes con color */
+  padding: 15px 32px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 15px; /* Bordes redondeados */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff867c; /* Color más claro al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+#rosa {
+  margin: 20px auto;
+  width: 0;
+  height: 0;
+  display: block;
+  position: relative;
+  background: none;
+  animation: crearRosa 2s forwards;
+}
+
+#rosa::before,
+#rosa::after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+#rosa::before {
+  width: 50px;
+  height: 50px;
+  background: #ff4d67;
+  border-radius: 50%;
+  top: 0;
+  left: 25px;
+}
+
+#rosa::after {
+  width: 10px;
+  height: 70px;
+  background: #228B22; /* Tallo verde */
+  top: 50px;
+  left: 45px;
+  border-radius: 5px;
+}
+
+.oculto {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+@keyframes crearRosa {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  </style>
+</head>
+<body>
+  <h1>hola nde</h1>
+  <p>respondeme, si o no nms ya ...</p>
+  <button onclick="mostrarMensaje()">Haz clic aquí</button>
+  
+  <script>
+    function mostrarMensaje() {
+      const respuesta = confirm("¿Quieres ser la Jennie de mi lisa? ");
+      if (respuesta) {
+        alert("¡O M G ❤️ (toca el okay))");
+        document.body.innerHTML = "<h1>¡Graciass tembo, sos el amor de mi vida! 🥺uwu oni onichan</h1>";
+      } else {
+        alert("que puta nde añarakokuape, vos nms perdes kp, japiro lgmt 🙄");
+        document.body.innerHTML = "<h1>andate ya de mi vida nde 🙄 la puta</h1>";
+      }
+    }
+  </script>
+</body>
+</html>
